@@ -18,8 +18,10 @@ public class CompositeMain {
     Part part = new Container(
       new CentralProcessingUnit(),
       new GraphicalProcessingUnit(),
-      new HardDrive(),
-      new HardDrive()
+      new Container(
+        new HardDrive(),
+        new HardDrive()
+      )
     );
 
     System.out.println(part.cost());
